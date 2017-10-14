@@ -1,55 +1,55 @@
-[{
-    "start": [{
-        "question": "Choose a hero type",
-        "Offensive": "Offensive",
-        "Defensive": "Defensive"
-    }],
-    "Offensive": [{
-        "question": "Choose an offensive type of hero",
-        "Tank": "Tank",
-        "DPS": "DPS"
-    }],
-    "Defensive": [{
-        "question": "Choose a defensive type of hero",
-        "Defense": "Defense",
-        "Support": "Support"
-    }],
-    "DPS": [{
-        "question": "Choose a DPS hero",
-        "Tracer": "Tracer",
-        "Sombra": "Sombra",
-        "Soldier 76": "Soldier 76",
-        "Pharah": "Pharah",
-        "McCree": "McCree",
-        "Genji": "Genji"
-    }],
-    "Support": [{
-        "question": "Choose a Support hero",
-        "Mercy": "Mercy",
-        "Ana": "Ana",
-        "Symettra": "Symettra",
-        "Lucio": "Lucio",
-        "Zenyatta": "Zenyatta"
-    }],
-    "Tank": [{
-        "question": "Choose a Tank hero",
-        "D.Va": "D.Va",
-        "Roadhog": "Roadhog",
-        "Soldier 76": "Soldier 76",
-        "Pharah": "Pharah",
-        "McCree": "McCree",
-        "Genji": "Genji"
-    }],
-    "Defense": [{
-        "Defense": "Choose a Defense hero",
-        "Tracer": "Tracer",
-        "Sombra": "Sombra",
-        "Soldier 76": "Soldier 76",
-        "Pharah": "Pharah",
-        "McCree": "McCree",
-        "Genji": "Genji"
-    }]
-    
-    
-    
-}]
+{
+	"start": {
+		"question": "Choose a hero type",
+		"Offensive": "Offensive",
+		"Defensive": "Defensive"
+	},
+	"Offensive": {
+		"question": "Choose an offensive type of hero",
+		"Tank": "Tank",
+		"DPS": "DPS"
+	},
+	"Defensive": {
+		"question": "Choose a defensive type of hero",
+		"Defense": "Defense",
+		"Support": "Support"
+	},
+	"DPS": {
+		"question": "Choose a DPS hero",
+		"Tracer": "Tracer",
+		"Sombra": "Sombra",
+		"Soldier 76": "Soldier 76",
+		"Pharah": "Pharah",
+		"McCree": "McCree",
+		"Genji": "Genji"
+	},
+	"Support": {
+		"question": "Choose a Support hero",
+		"Mercy": "Mercy",
+		"Ana": "Ana",
+		"Symettra": "Symettra",
+		"Lucio": "Lucio",
+		"Zenyatta": "Zenyatta"
+	},
+	"Tank": {
+		"question": "Choose a Tank hero",
+		"D.Va": "D.Va",
+		"Roadhog": "Roadhog",
+		"Soldier 76": "Soldier 76",
+		"Pharah": "Pharah",
+		"McCree": "McCree",
+		"Genji": "Genji"
+	},
+	"Defense": {
+		"Defense": "Choose a Defense hero",
+		"Tracer": "Tracer",
+		"Sombra": "Sombra",
+		"Soldier 76": "Soldier 76",
+		"Pharah": "Pharah",
+		"McCree": "McCree",
+		"Genji": "Genji"
+	}
+
+
+
+}

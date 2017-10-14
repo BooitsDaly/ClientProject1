@@ -15,7 +15,7 @@
             httpObj.onreadystatechange = function() {
                 if (httpObj.readyState == 4 && httpObj.status == 200) {
                     /* read the response into the variable 'myArr' */
-                    var myArr = JSON.parse(httpObj.responseText);
+                    var myArr = JSON.parse(JSON.stringify(httpObj.responseText));
                     /* process the data you received from the response */
                     doIt(myArr);
                 }
@@ -26,26 +26,28 @@
             /*-----------------------------------------------------*/
             
             //this function will act like a main
-            function doIt(){
+            function doIt(arr){
+                console.log(arr.start.length);
+                console.log(arr.start[0]);
                 var ele = document.createElement("select");
                 ele.setAttribute("onchange","change(this)");
-                for(var i = 0; i < obj.start.length; i++){
+                for(var i = 0; i < arr.start.length; i++){
                     var createOpt = document.createElement("option");
-                    createOpt.setAttribute("value",obj.start[i]);
+                    createOpt.setAttribute("value",arr.start[i]);
                     ele.appendChild(createOpt);
                 }//end for
-                document.getElementById("selects").innerHTML(ele);
+                document.getElementById("selects").appendChild(ele);
             }
             
             function change(dom){
                var ele =  document.createElement("select");
                 ele.setAttribute("onchange","change(this)");
-                for(var i = 0; i < obj.dom.length; i++){
+                for(var i = 0; i < arr.dom[1].length; i++){
                     var createOpt = document.createElement("option");
-                    createOpt.setAttribute("value",obj.dom[i]);
+                    createOpt.setAttribute("value",arr.dom[i]);
                     ele.appendChild(createOpt);
                 }//end for
-                document.getElementById("selects").innerHTML(ele);
+                document.getElementById("selects").appendChild(ele);
             }//end function
         </script>
     </head>
