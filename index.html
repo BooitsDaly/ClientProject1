@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title> </title>
+        <script>
+            /* This script reads the JSON data file from the web server */
+
+            /* Declare the name of your json file */
+            var url = "https://people.rit.edu/cnd9351/ISTE-330/data.json";
+
+            /* Create an XMLHttpRequest object to reqest data from a web server */
+            var httpObj = new XMLHttpRequest();
+
+            /* This function is called every time the status of the request object changes */
+            /* When the readystate is 4, and the status is 200, the response is ready */
+            httpObj.onreadystatechange = function() {
+                if (httpObj.readyState == 4 && httpObj.status == 200) {
+                    /* read the response into the variable 'myArr' */
+                    var myArr = JSON.parse(httpObj.responseText);
+                    /* process the data you received from the response */
+                    doIt(myArr);
+                }
+            };
+            httpObj.open("GET", url, true);
+            /* the send method with no parameters is used for GET  */
+            httpObj.send();
+            /*-----------------------------------------------------*/
+            
+            //this function will act like a main
+            function doIt(){
+                
+            }
+            
+            function change(dom){
+               var ele =  document.createElement("select");
+                ele.setAttribute("onchange","change(this)");
+                for(var i = 0; i < obj.dom.length; i++){
+                    var createOpt = document.createElement("option");
+                    createOpt.setAttribute("value",obj.dom[i]);
+                    ele.appendChild(createOpt);
+                }//end for
+                document.getElementById("selects").innerHTML(ele);
+            }//end function
+        </script>
+    </head>
+    <body>
+        <div id="selects">
+            <select onchange = "change(this);">
+                <option value = "hi">
+                    
+                </option>
+                <option value = "high">
+                
+                </option>
+            </select>
+        </div>
+    </body>
+</html>
