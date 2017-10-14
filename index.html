@@ -5,7 +5,7 @@
             /* This script reads the JSON data file from the web server */
 
             /* Declare the name of your json file */
-            var url = "https://people.rit.edu/cnd9351/ISTE-330/data.json";
+            var url = "data.json";
 
             /* Create an XMLHttpRequest object to reqest data from a web server */
             var httpObj = new XMLHttpRequest();
@@ -27,7 +27,14 @@
             
             //this function will act like a main
             function doIt(){
-                
+                var ele = document.createElement("select");
+                ele.setAttribute("onchange","change(this)");
+                for(var i = 0; i < obj.start.length; i++){
+                    var createOpt = document.createElement("option");
+                    createOpt.setAttribute("value",obj.start[i]);
+                    ele.appendChild(createOpt);
+                }//end for
+                document.getElementById("selects").innerHTML(ele);
             }
             
             function change(dom){
