@@ -1,0 +1,9 @@
+<Overwatch>
+    <start>
+        <question> Choose a Hero type </question>
+        <answers>
+            <offensive> Offensive </offensive>
+            <defensive> Defensive </defensive>
+        </answers>
+    </start>
+</Overwatch>
