@@ -27,15 +27,13 @@
             
             //this function will act like a main
             function doIt(arr){
+                console.log(Object.keys(arr.start).length);
                 var ele = document.createElement("select");
                 ele.setAttribute("onchange","change(this)");
-                for(var i in arr){
-                    var item = arr[i];
-                        for (var x in item){
-                        var createOpt = document.createElement("option");
-                        createOpt.setAttribute("value",arr.start[i]);
-                        ele.appendChild(createOpt);
-                    }//end for
+                for(var i = 0; i < Object.keys(arr.start).length; i++){
+                    var createOpt = document.createElement("option");
+                    createOpt.setAttribute("value",arr.start[i]);
+                    ele.appendChild(createOpt);
                 }//end for
                 document.getElementById("selects").appendChild(ele);
             }
