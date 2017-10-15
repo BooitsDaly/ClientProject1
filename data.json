@@ -1,14 +1,16 @@
 [{
-	"start": [{
+	"start": {
 		"question": "Choose a hero type",
-		"Offensive": "Offensive",
-		"Defensive": "Defensive"
-	}],
-	"Offensive": [{
+		"answer":[
+            "Offensive",
+            "Defensive"
+        ]
+	},
+	"Offensive": {
 		"question": "Choose an offensive type of hero",
-		"Tank": "Tank",
+		"""Tank": "Tank",
 		"DPS": "DPS"
-	}],
+	},
 	"Defensive": [{
 		"question": "Choose a defensive type of hero",
 		"Defense": "Defense",

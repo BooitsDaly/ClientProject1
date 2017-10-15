@@ -6,4 +6,69 @@
             <defensive> Defensive </defensive>
         </answers>
     </start>
+    
+    <offensive>
+        <question> Choose an offensive type of hero </question>
+        <answers>
+            <tank> Tank </tank>
+            <dps> DPS </dps>
+        </answers>
+    </offensive>
+    
+    <defensive>
+        <question> Choose a defensive type of hero</question>
+        <answers>
+            <defense>Defense</defense>
+            <support>Support</support>
+        </answers>
+    </defensive>
+    
+    <dps>
+        <question>Choose a DPS hero</question>
+        <answers>
+            <tracer> Tracer </tracer>
+            <sombra>Sombra</sombra>
+            <soldier76> Soldier 76 </soldier76>
+            <pharah> Pharah </pharah>
+            <mccree> McCree</mccree>
+            <genji> Genji </genji>
+        </answers>
+    </dps>
+    
+    <tank>
+        <question> Choose a Tank hero</question>
+        <answers>
+            <dva> D.Va </dva>
+            <roadhog> Roadhog </roadhog>
+            <winston> Winston </winston>
+            <rienhart> Rienhart </rienhart>
+            <zarya> Zarya </zarya>
+            <orisa> Orisa </orisa>
+        </answers>
+    </tank>
+    
+    <defense>
+        <question>Choose a Defense hero</question>
+        <answers>
+            <symetra> Symentra</symetra>
+            <torbjorn> Torbjorn </torbjorn>
+            <hanzo> Hanzo </hanzo>
+            <widowmaker> Widowmaker </widowmaker>
+            <bastion> Bastion </bastion>
+            <junkrat> Junkrat </junkrat>
+        </answers>
+    </defense>
+    
+    <support>
+        <question> Choose a Support hero</question>
+        <answers>
+            <mercy> Mercy </mercy>
+            <ana> Ana </ana>
+            <lucio> Lucio </lucio>
+            <zenyatta>Zenyatta</zenyatta>
+        </answers>
+    </support>
+    
+    
+    
 </Overwatch>
