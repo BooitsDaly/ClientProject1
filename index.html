@@ -15,7 +15,7 @@
             httpObj.onreadystatechange = function() {
                 if (httpObj.readyState == 4 && httpObj.status == 200) {
                     /* read the response into the variable 'myArr' */
-                    var myArr = JSON.parse(JSON.stringify(httpObj.responseText));
+                    var myArr = JSON.parse(httpObj.responseText);
                     /* process the data you received from the response */
                     doIt(myArr);
                 }
@@ -27,10 +27,11 @@
             
             //this function will act like a main
             function doIt(arr){
-                console.log(Object.keys(arr.start).length);
+                console.log(arr.start);
+                console.log(arr);
                 var ele = document.createElement("select");
                 ele.setAttribute("onchange","change(this)");
-                for(var i = 0; i < Object.keys(arr.start).length; i++){
+                for(var i = 0; i < Object.keys(arr.start[0]).length; i++){
                     var createOpt = document.createElement("option");
                     createOpt.setAttribute("value",arr.start[i]);
                     ele.appendChild(createOpt);

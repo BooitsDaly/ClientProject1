@@ -1,20 +1,20 @@
-{
-	"start": {
+[{
+	"start": [{
 		"question": "Choose a hero type",
 		"Offensive": "Offensive",
 		"Defensive": "Defensive"
-	},
-	"Offensive": {
+	}],
+	"Offensive": [{
 		"question": "Choose an offensive type of hero",
 		"Tank": "Tank",
 		"DPS": "DPS"
-	},
-	"Defensive": {
+	}],
+	"Defensive": [{
 		"question": "Choose a defensive type of hero",
 		"Defense": "Defense",
 		"Support": "Support"
-	},
-	"DPS": {
+	}],
+	"DPS": [{
 		"question": "Choose a DPS hero",
 		"Tracer": "Tracer",
 		"Sombra": "Sombra",
@@ -22,16 +22,16 @@
 		"Pharah": "Pharah",
 		"McCree": "McCree",
 		"Genji": "Genji"
-	},
-	"Support": {
+	}],
+	"Support": [{
 		"question": "Choose a Support hero",
 		"Mercy": "Mercy",
 		"Ana": "Ana",
 		"Symettra": "Symettra",
 		"Lucio": "Lucio",
 		"Zenyatta": "Zenyatta"
-	},
-	"Tank": {
+	}],
+	"Tank": [{
 		"question": "Choose a Tank hero",
 		"D.Va": "D.Va",
 		"Roadhog": "Roadhog",
@@ -39,8 +39,8 @@
 		"Pharah": "Pharah",
 		"McCree": "McCree",
 		"Genji": "Genji"
-	},
-	"Defense": {
+	}],
+	"Defense": [{
 		"Defense": "Choose a Defense hero",
 		"Tracer": "Tracer",
 		"Sombra": "Sombra",
@@ -48,8 +48,8 @@
 		"Pharah": "Pharah",
 		"McCree": "McCree",
 		"Genji": "Genji"
-	}
+	}]
 
 
 
-}
+}]
