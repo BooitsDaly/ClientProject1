@@ -46,7 +46,7 @@ function selected(dom) {
         //name of character selected
         var character = document.createElement("h2");
         //add character name
-        character.appendChild(document.createTextNode('You choose ' + dom+''));
+        character.appendChild(document.createTextNode('You chose ' + dom+''));
         //add character to div
         divEle.appendChild(character);
         
@@ -64,7 +64,7 @@ function selected(dom) {
         var imgage = document.createElement("img");
         imgage.src = object[dom+''].pics;
         imgage.setAttribute("alt",dom+'');
-        imgage.setAttribute("width","50%");
+        imgage.setAttribute("width","500em");
         divPic.appendChild(imgage);
         //append div into everything div
         divEle.appendChild(divPic);

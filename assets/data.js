@@ -157,6 +157,6 @@ var object = {
     },
     'its not': {
         value: 'its not',
-        pics: ['images/troll2.jpg']
+        pics: ['images/troll2.png']
     }
 };
