@@ -1,7 +1,7 @@
 var object = {
     starwars: {
         value: 'Choose a trilogy',
-        answers: ['Original', 'George Lucas greatest failure 1-3 ', 'New 7-9']
+        answers: ['Original', 'George Lucas greatest failure 1-3', 'New 7-9']
     },
     Original: {
         value: 'Choose an episode',

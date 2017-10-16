@@ -8,8 +8,45 @@
         
     </body>
     <script>
+         //function to kill the dom elements that dont belong
+            function killIt(toKill){
+                while(toKill.parentNode.nextSibling){
+                    toKill.parentNode.nextSibling.remove();
+                }
+            }
+            function selected(dom){
+                //kill anything that doesnt belong
+                killIt(dom);
+                dom = dom.value;
+                var bodyEle = document.getElementById("here");
+                var initQ = document.createElement("h2");
+                initQ.appendChild(document.createTextNode(object[dom+''].value));
+                //function to create all of the options
+                var divEle = document.createElement("div");
+                divEle.appendChild(initQ);
+                var ele = document.createElement("select");
+                divEle.appendChild(ele);
+                var disabledOption = document.createElement('option');
+                disabledOption.selected = true;
+                disabledOption.disabled = true;
+                disabledOption.appendChild(document.createTextNode("--Select One--"));
+                ele.appendChild(disabledOption);
+                ele.onchange = function(){selected(this);}
+                if(typeof object[dom+''].answers != "undefined"){
+                    for(var i = 0; i < object[dom+''].answers.length; i++){
+                        var createOpt = document.createElement("option");
+                        createOpt.setAttribute("value",object[dom+''].answers[i]);
+                        createOpt.appendChild(document.createTextNode(object[dom+''].answers[i]));
+                        ele.appendChild(createOpt);
+                    }
+                }
+                else{
+                    console.log("here");
+                }
+                bodyEle.appendChild(divEle);
+                
+            }
             
-            console.log(object.starwars.answers.length);
             //set variable to make it easier to attach elements to the dom
             
             var bodyEle = document.getElementById("here");
@@ -18,9 +55,15 @@
             bodyEle.appendChild(initQ);
             //function to create all of the options
             var divEle = document.createElement("div");
+            divEle.appendChild(initQ);
             var ele = document.createElement("select");
             divEle.appendChild(ele);
-            ele.onchange = function(){selected(this);}
+            var disabledOption = document.createElement('option');
+            disabledOption.selected = true;
+            disabledOption.disabled = true;
+            disabledOption.appendChild(document.createTextNode("--Select One--"));
+            ele.appendChild(disabledOption);
+            ele.setAttribute("onchange","selected(this);");
             for(var i = 0; i < object.starwars.answers.length; i++){
                 var createOpt = document.createElement("option");
                 createOpt.setAttribute("value",object.starwars.answers[i]);
@@ -28,29 +71,9 @@
                 ele.appendChild(createOpt);
             }
             bodyEle.appendChild(divEle);
+            
+           
         
-            function selected(dom){
-                //kill anything that doesnt belong
-                //document.getElementById()removeChild(dom);
-                console.log(dom);
-                var bodyEle = document.getElementById("here");
-                var initQ = document.createElement("h2");
-                initQ.appendChild(document.createTextNode(object.dom.value));
-                bodyEle.appendChild(initQ);
-                //function to create all of the options
-                var divEle = document.createElement("div");
-                var ele = document.createElement("select");
-                divEle.appendChild(ele);
-                ele.onchange = function(){selected(this);}
-                for(var i = 0; i < object.starwars.answers.length; i++){
-                    var createOpt = document.createElement("option");
-                    createOpt.setAttribute("value",object.dom.answers[i]);
-                    createOpt.appendChild(document.createTextNode(object.dom.answers[i]));
-                    ele.appendChild(createOpt);
-                }
-                bodyEle.appendChild(divEle);
-                
-            }
                 
             
         </script>
