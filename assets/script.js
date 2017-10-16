@@ -3,7 +3,7 @@ function killIt(toKill) {
     while (toKill.parentNode.nextSibling) {
         
         //stoKill.parentNode.nextSibling.setAttribute("class","fadeout");
-        toKill.parentNode.nextSibling.remove();
+        toKill.parentNode.parentNode.removeChild(toKill.parentNode.nextSibling);
     }
 }
 //function to validate form
