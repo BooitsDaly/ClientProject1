@@ -104,7 +104,7 @@ var object = {
         pics: ['images/quigon.jpg']
     },
     'Padme': {
-        value: 'Padmé Amidala Naberrie, commonly known as Padmé Amidala, was a human female politician who became a leading voice for peace and diplomacy during the final years of the Galactic Republic. Rising to galactic prominence after the Trade Federation invaded and occupied her homeworld of Naboo, she emerged as a leading member of the Galactic Senate during the Clone Wars. Through her furtive relationship and marriage to Jedi Knight Anakin Skywalker, she was the mother of the legendary Jedi Master Luke Skywalker and Princess Leia Organa of Alderaan, the latter of whom followed in her footsteps as a champion for the democratic ideals of the Republic.',
+        value: 'Padme Amidala Naberrie, commonly known as Padme Amidala, was a human female politician who became a leading voice for peace and diplomacy during the final years of the Galactic Republic. Rising to galactic prominence after the Trade Federation invaded and occupied her homeworld of Naboo, she emerged as a leading member of the Galactic Senate during the Clone Wars. Through her furtive relationship and marriage to Jedi Knight Anakin Skywalker, she was the mother of the legendary Jedi Master Luke Skywalker and Princess Leia Organa of Alderaan, the latter of whom followed in her footsteps as a champion for the democratic ideals of the Republic.',
         pics: ['images/padme.jpg']
     },
     'Annoying Anakin': {

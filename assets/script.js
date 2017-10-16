@@ -9,6 +9,7 @@ function selected(dom) {
     //kill anything that doesnt belong
     killIt(dom);
     dom = dom.value;
+    //if there isnt an answers section go to else end of data option menus
     if (object[dom + ''].answers !== undefined) {
         var bodyEle = document.getElementById("here");
         var initQ = document.createElement("h2");
@@ -36,8 +37,40 @@ function selected(dom) {
         bodyEle.appendChild(divEle);
     } 
    
+    //create the final nodes
     else {
-        console.log("here");
+        //create div to place the data in
+        var divEle = document.createElement("div");
+        //give div an id for styling
+        divEle.setAttribute("id","everythingDiv");
+        //name of character selected
+        var character = document.createElement("h2");
+        //add character name
+        character.appendChild(document.createTextNode('You choose ' + dom+''));
+        //add character to div
+        divEle.appendChild(character);
+        
+        //create discription field
+        var desc = document.createElement("p");
+        desc.appendChild(document.createTextNode(object[dom+''].value));
+        //add into div
+        divEle.appendChild(desc);
+        
+        //create new div for picture
+        var divPic = document.createElement("div");
+        //give div an id for styling
+        divPic.setAttribute("id","picDiv");
+        //add the image into the div
+        var imgage = document.createElement("img");
+        imgage.src = object[dom+''].pics;
+        imgage.setAttribute("alt",dom+'');
+        imgage.setAttribute("width","50%");
+        divPic.appendChild(imgage);
+        //append div into everything div
+        divEle.appendChild(divPic);
+        
+        //add everything in
+        document.getElementById("here").appendChild(divEle);
     }
 
 }
