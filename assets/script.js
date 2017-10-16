@@ -6,7 +6,7 @@ function killIt(toKill) {
         toKill.parentNode.nextSibling.remove();
     }
 }
-
+//function to validate form
 function validate(){
     var x = document.forms["myForm"]["fname"].value;
     var y = document.forms["myForm"]["lname"].value;
