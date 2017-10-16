@@ -9,7 +9,7 @@ function selected(dom) {
     //kill anything that doesnt belong
     killIt(dom);
     dom = dom.value;
-    if (undefined !== object[dom + ''].value.length) {
+    if (object[dom + ''].answers !== undefined) {
         var bodyEle = document.getElementById("here");
         var initQ = document.createElement("h2");
         initQ.appendChild(document.createTextNode(object[dom + ''].value));
