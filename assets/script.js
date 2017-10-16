@@ -19,11 +19,14 @@ function selected(dom) {
         divEle.appendChild(initQ);
         var ele = document.createElement("select");
         divEle.appendChild(ele);
+        
+        //create disabled option as first option for onchange
         var disabledOption = document.createElement('option');
         disabledOption.selected = true;
         disabledOption.disabled = true;
         disabledOption.appendChild(document.createTextNode("--Select One--"));
         ele.appendChild(disabledOption);
+        
         ele.onchange = function () {
             selected(this);
         }
@@ -71,12 +74,63 @@ function selected(dom) {
         
         //add everything in
         document.getElementById("here").appendChild(divEle);
+        
+        //create form with validation.. dun dun dun
+        var createForm = document.createElement("form");
+        createForm.setAttribute("name","myForm");
+        createForm.setAttribute("method","post");
+        createForm.setAttribute("onsubmit","return validate();");
+        
+        //create inputs
+        var createinputFirst = document.createElement("input");
+        var createinputLast = document.createElement("input");
+        var createinputEmail = document.createElement("input");
+        var createinputButton = document.createElement("input");
+        
+        //assign type to inputs
+        createinputEmail.setAttribute("type","text");
+        createinputFirst.setAttribute("type","text");
+        createinputLast.setAttribute("type","text");
+        
+        //assign names
+        createinputEmail.setAttribute("name","email");
+        createinputFirst.setAttribute("name","fname");
+        createinputLast.setAttribute("name","lname");
+        
+        //create submit button
+        createinputButton.setAttribute("type","submit");
+        createinputButton.setAttribute("value","Submit");
+        
+        //append everything
+        createForm.appendChild(document.createTextNode("Fill out the form below to get emailed your results!"));
+        createForm.appendChild(document.createElement("br"));
+        
+        createForm.appendChild(document.createTextNode("First Name"));
+        createForm.appendChild(createinputFirst);
+        createForm.appendChild(document.createElement("br"));
+        
+        createForm.appendChild(document.createTextNode("Last Name"));
+        createForm.appendChild(createinputLast);
+        createForm.appendChild(document.createElement("br"));
+        
+        createForm.appendChild(document.createTextNode("Email"));
+        createForm.appendChild(createinputEmail);
+        createForm.appendChild(document.createElement("br"));
+        
+        createForm.appendChild(createinputButton);
+        
+        document.getElementById("here").appendChild(createForm);
+        
+        
+        
+        
     }
 
 }
 
 //set variable to make it easier to attach elements to the dom
-
+//this will set up on the page onload (it is the first select options)
+//this will ALWAYS load first, should always be visible
 var bodyEle = document.getElementById("here");
 var initQ = document.createElement("h2");
 initQ.appendChild(document.createTextNode(object.starwars.value));
