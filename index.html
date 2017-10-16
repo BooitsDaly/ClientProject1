@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title> </title>
+        <!--<script>scr = "script.js"</script>-->
+        <script src = "data.js"> </script>
+    </head>
+    <body id="here">
+        
+    </body>
+    <script>
+            
+            console.log(object.starwars.answers.length);
+            //set variable to make it easier to attach elements to the dom
+            
+            var bodyEle = document.getElementById("here");
+            var initQ = document.createElement("h2");
+            initQ.appendChild(document.createTextNode(object.starwars.value));
+            bodyEle.appendChild(initQ);
+            //function to create all of the options
+            var divEle = document.createElement("div");
+            var ele = document.createElement("select");
+            divEle.appendChild(ele);
+            ele.onchange = function(){selected(this);}
+            for(var i = 0; i < object.starwars.answers.length; i++){
+                var createOpt = document.createElement("option");
+                createOpt.setAttribute("value",object.starwars.answers[i]);
+                createOpt.appendChild(document.createTextNode(object.starwars.answers[i]));
+                ele.appendChild(createOpt);
+            }
+            bodyEle.appendChild(divEle);
+        
+            function selected(dom){
+                //kill anything that doesnt belong
+                //document.getElementById()removeChild(dom);
+                console.log(dom);
+                var bodyEle = document.getElementById("here");
+                var initQ = document.createElement("h2");
+                initQ.appendChild(document.createTextNode(object.dom.value));
+                bodyEle.appendChild(initQ);
+                //function to create all of the options
+                var divEle = document.createElement("div");
+                var ele = document.createElement("select");
+                divEle.appendChild(ele);
+                ele.onchange = function(){selected(this);}
+                for(var i = 0; i < object.starwars.answers.length; i++){
+                    var createOpt = document.createElement("option");
+                    createOpt.setAttribute("value",object.dom.answers[i]);
+                    createOpt.appendChild(document.createTextNode(object.dom.answers[i]));
+                    ele.appendChild(createOpt);
+                }
+                bodyEle.appendChild(divEle);
+                
+            }
+                
+            
+        </script>
+</html>
