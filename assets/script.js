@@ -1,10 +1,25 @@
 //function to kill the dom elements that dont belong
 function killIt(toKill) {
     while (toKill.parentNode.nextSibling) {
+        //toKill.parentNode.nextSibling.setAttribute();
         toKill.parentNode.nextSibling.remove();
     }
 }
 
+function validate(){
+    var x = document.forms["myForm"]["fname"].value;
+    var y = document.forms["myForm"]["lname"].value;
+    var z = document.forms["myForm"]["email"].value;
+    
+    //check if there is anything in the value
+    if(x=="" || y=="" || z==""){
+        alert("Please make sure all inputs are filled in");
+        return false;
+    }
+    //check that it is a valid name
+    
+    //security stuff check
+}
 function selected(dom) {
     //kill anything that doesnt belong
     killIt(dom);
