@@ -57,7 +57,7 @@ var object = {
     },
     'Sith Lord': {
         value: 'Palpatine, also known as Darth Sidious, was a Force-sensitive Human male who served as the last Supreme Chancellor of the Galactic Republic and the first Emperor of the Galactic Empire. A Dark Lord of the Sith in the Order of the Sith Lords, recorded by history as the most powerful who had ever lived, his entire life was the culmination of a thousand-year plan to overthrow the Republic and the Jedi Order from within.',
-        answers: ['images/sithlord.jpg']
+        pics: ['images/sithlord.jpg']
     },
     Chewbacca: {
         value: 'Chewbacca, known affectionately to his friends as Chewie, was a Wookiee warrior, smuggler, and resistance fighter who fought in the Clone Wars, the Galactic Civil War, and the conflict between the First Order and the Resistance. He hailed from the planet Kashyyyk and became a Wookiee military leader. During the Clone Wars, he was captured by Trandoshan slavers and held captive on Wasskah, but he worked with a fellow captive, Jedi Commander Ahsoka Tano, to escape. He later commanded Wookiee forces during the Battle of Kashyyyk alongside the Grand Army of the Republic, led by Jedi Master Yoda. During the battle, one of the last ones of the war, Yoda\'s clone troopers received Order 66 from Supreme Chancellor Palpatine and, with the help of Chewbacca, Yoda escaped Kashyyyk and the destruction of the Jedi Order.',

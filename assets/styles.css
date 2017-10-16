@@ -1,0 +1,50 @@
+.fadeout {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+
+div{
+    width: 50%;
+    border: solid;
+    border-radius: 5px;
+    border-color: darkturquoise;
+    background-color: lightgray;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+}
+#picDiv{
+    border: none;
+    width: none;
+}
+h1{
+    text-align: center;
+    color: aliceblue;
+}
+
+img{
+    text-align: left;
+    width: 100%;
+
+}
+form{
+    margin-left: auto;
+    margin-right:auto;
+    width: 50%;
+    border: solid;
+    border-radius: 5px;
+    border-color: darkturquoise;
+    background-color: lightgray;
+    margin-top: 1em;
+    text-align: center;
+    
+}
+input{
+    margin-top: 1em;
+}
+body{
+    background-image: url("../images/stars.jpg");
+    background-position: center;
+}

@@ -1,7 +1,8 @@
 //function to kill the dom elements that dont belong
 function killIt(toKill) {
     while (toKill.parentNode.nextSibling) {
-        //toKill.parentNode.nextSibling.setAttribute();
+        
+        //stoKill.parentNode.nextSibling.setAttribute("class","fadeout");
         toKill.parentNode.nextSibling.remove();
     }
 }
@@ -16,9 +17,6 @@ function validate(){
         alert("Please make sure all inputs are filled in");
         return false;
     }
-    //check that it is a valid name
-    
-    //security stuff check
 }
 function selected(dom) {
     //kill anything that doesnt belong
@@ -120,15 +118,15 @@ function selected(dom) {
         createForm.appendChild(document.createTextNode("Fill out the form below to get emailed your results!"));
         createForm.appendChild(document.createElement("br"));
         
-        createForm.appendChild(document.createTextNode("First Name"));
+        createForm.appendChild(document.createTextNode("First Name:    "));
         createForm.appendChild(createinputFirst);
         createForm.appendChild(document.createElement("br"));
         
-        createForm.appendChild(document.createTextNode("Last Name"));
+        createForm.appendChild(document.createTextNode("Last Name:     "));
         createForm.appendChild(createinputLast);
         createForm.appendChild(document.createElement("br"));
         
-        createForm.appendChild(document.createTextNode("Email"));
+        createForm.appendChild(document.createTextNode("Email:         "));
         createForm.appendChild(createinputEmail);
         createForm.appendChild(document.createElement("br"));
         
@@ -160,7 +158,9 @@ disabledOption.selected = true;
 disabledOption.disabled = true;
 disabledOption.appendChild(document.createTextNode("--Select One--"));
 ele.appendChild(disabledOption);
-ele.setAttribute("onchange", "selected(this);");
+ele.onchange = function () {
+            selected(this);
+        }
 for (var i = 0; i < object.starwars.answers.length; i++) {
     var createOpt = document.createElement("option");
     createOpt.setAttribute("value", object.starwars.answers[i]);
