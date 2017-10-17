@@ -37,6 +37,8 @@ function validate(){
     //else use a cookie
     else{
         document.cookie = x;
+        document.cookie = y;
+        document.cookie = z;
     }
 }
 function selected(dom) {
