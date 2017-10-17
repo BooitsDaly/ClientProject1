@@ -116,7 +116,7 @@ function selected(dom) {
             document.getElementById("here").appendChild(divEle);
             
             //get the image and spin it
-            imgage.setAttribute("class", "rotated-image");
+            //imgage.setAttribute("class", "rotated-image");
 
             //create form with validation.. dun dun dun
             var createForm = document.createElement("form");
@@ -163,15 +163,16 @@ function selected(dom) {
                 }
             }
             //cookies
+            //couldnt get the cookies to set properly.. broke my page
             else{
-                //to handle special characters
-                var decodedCookie = decodeURIComponent(document.cookie);
-                //spit cookie per value
-                var ca = decodedCookie.split(';');
-                
-                createinputEmail.setAttribute("value",ca[0]);
-                createinputFirst.setAttribute("value",ca[1]);
-                createinputLast.setAttribute("value",ca[2]);
+//                //to handle special characters
+//                var decodedCookie = decodeURIComponent(document.cookie);
+//                //spit cookie per value
+//                var ca = decodedCookie.split(';');
+//                
+//                createinputEmail.setAttribute("value",ca[0]);
+//                createinputFirst.setAttribute("value",ca[1]);
+//                createinputLast.setAttribute("value",ca[2]);
                 
             }
 
