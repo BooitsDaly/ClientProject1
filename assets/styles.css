@@ -4,6 +4,10 @@
   transition: opacity 2s linear;
 }
 
+.rotated-image {
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
 div{
     width: 50%;
     border: solid;

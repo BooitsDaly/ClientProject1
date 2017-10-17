@@ -1,3 +1,5 @@
+
+
 //function to kill the dom elements that dont belong
 function killIt(toKill) {
     while (toKill.parentNode.nextSibling) {
@@ -112,6 +114,9 @@ function selected(dom) {
 
             //add everything in
             document.getElementById("here").appendChild(divEle);
+            
+            //get the image and spin it
+            imgage.setAttribute("class", "rotated-image");
 
             //create form with validation.. dun dun dun
             var createForm = document.createElement("form");
@@ -140,18 +145,15 @@ function selected(dom) {
             createinputFirst.setAttribute("name","fname");
             createinputLast.setAttribute("name","lname");
             
-            //set value
-            
-
             //create submit button
             createinputButton.setAttribute("type","submit");
             createinputButton.setAttribute("value","Submit");
             
-            console.log(localStorage.getItem('lname'));
+            //console.log(localStorage.getItem('lname'));
             //if localstorage or cookies put in the values
             if(window.localStorage){
                 if(localStorage.getItem('lname') && localStorage.getItem('fname') && localStorage.getItem('email')){
-                    
+                    //set values
                     createinputEmail.setAttribute("value",localStorage.getItem('fname'));
                     createinputFirst.setAttribute("value",localStorage.getItem('lname'));
                     createinputLast.setAttribute("value",localStorage.getItem('email'));
@@ -162,6 +164,14 @@ function selected(dom) {
             }
             //cookies
             else{
+                //to handle special characters
+                var decodedCookie = decodeURIComponent(document.cookie);
+                //spit cookie per value
+                var ca = decodedCookie.split(';');
+                
+                createinputEmail.setAttribute("value",ca[0]);
+                createinputFirst.setAttribute("value",ca[1]);
+                createinputLast.setAttribute("value",ca[2]);
                 
             }
 
@@ -222,8 +232,4 @@ function loadIt(){
         ele.appendChild(createOpt);
     }
     bodyEle.appendChild(divEle);
-}
-           
-        
-                
-            
+}           
