@@ -15,7 +15,7 @@ function validate(){
     var z = document.forms["myForm"]["email"].value;
     
     //check if there is anything in the value
-    if(x=="" || y=="" || z==""){
+    if(x==undefined || y==undefined || z==undefined){
         alert("Please make sure all inputs are filled in");
         return false;
     }
