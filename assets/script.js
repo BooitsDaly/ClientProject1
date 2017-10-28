@@ -19,19 +19,10 @@ function validate() {
     }
     //if there is local storage use that
     if (window.localStorage) {
-        if (localStorage.getItem('lname') && localStorage.getItem('fname') && localStorage.getItem('email')) {
-            //delete then set data
-            localStorage.replace('fname');
-            localStorage.setItem('fname', x);
-            localStorage.removeItem('lname');
-            localStorage.setItem('lname', y);
-            localStorage.removeItem('email');
-            localStorage.setItem('email', z);
-        } else {
-            localStorage.setItem('fname', x);
-            localStorage.setItem('lname', y);
-            localStorage.setItem('email', z);
-        }
+        localStorage.setItem('fname', x);
+        localStorage.setItem('lname', y);
+        localStorage.setItem('email', z);
+        
     }
     //else use a cookie
     else {
@@ -152,9 +143,9 @@ function selected(dom) {
             if (window.localStorage) {
                 if (localStorage.getItem('lname') !== null && localStorage.getItem('lname').value !== "" && localStorage.getItem('lname') !== undefined) {
                     //set values
-                    createinputEmail.setAttribute("value", localStorage.getItem('fname'));
-                    createinputFirst.setAttribute("value", localStorage.getItem('lname'));
-                    createinputLast.setAttribute("value", localStorage.getItem('email'));
+                    createinputEmail.setAttribute("value", localStorage.getItem('email'));
+                    createinputFirst.setAttribute("value", localStorage.getItem('fname'));
+                    createinputLast.setAttribute("value", localStorage.getItem('lname'));
                 }
 
                 //            //cookies
