@@ -2,7 +2,7 @@
 function killIt(toKill) {
     while (toKill.parentNode.nextSibling) {
 
-        //stoKill.parentNode.nextSibling.setAttribute("class","fadeout");
+        //toKill.parentNode.nextSibling.nodeValue = document.setAttribute("class","fadeout");
         toKill.parentNode.parentNode.removeChild(toKill.parentNode.nextSibling);
     }
 }
@@ -26,9 +26,18 @@ function validate() {
     }
     //else use a cookie
     else {
-        document.cookie = x;
-        document.cookie = y;
-        document.cookie = z;
+        //if the cookie exists
+        if(GetCookie('fname') != null){
+            SetCookie("fname",x);
+            SetCookie('lname',y);
+            SetCookie('email',z);
+        }
+        else{
+            document.cookie = "fname =" + x;
+            document.cookie = "lname = " + y;
+            document.cookie = "email = " + z;
+        }
+        
     }
 }
 
@@ -124,11 +133,6 @@ function selected(dom) {
             createinputFirst.setAttribute("type", "text");
             createinputLast.setAttribute("type", "text");
 
-            //set ids
-            //            createinputEmail.setAttribute("id","fname");
-            //            createinputFirst.setAttribute("id","lname");
-            //            createinputLast.setAttribute("id","email");
-
             //assign names
             createinputEmail.setAttribute("name", "email");
             createinputFirst.setAttribute("name", "fname");
@@ -138,7 +142,6 @@ function selected(dom) {
             createinputButton.setAttribute("type", "submit");
             createinputButton.setAttribute("value", "Submit");
 
-            //console.log(localStorage.getItem('lname'));
             //if localstorage or cookies put in the values
             if (window.localStorage) {
                 if (localStorage.getItem('lname') !== null && localStorage.getItem('lname').value !== "" && localStorage.getItem('lname') !== undefined) {
@@ -147,22 +150,7 @@ function selected(dom) {
                     createinputFirst.setAttribute("value", localStorage.getItem('fname'));
                     createinputLast.setAttribute("value", localStorage.getItem('lname'));
                 }
-
-                //            //cookies
-                //            //couldnt get the cookies to set properly.. broke my page
-                //            else{
-                ////                //to handle special characters
-                ////                var decodedCookie = decodeURIComponent(document.cookie);
-                ////                //spit cookie per value
-                ////                var ca = decodedCookie.split(';');
-                ////                
-                ////                createinputEmail.setAttribute("value",ca[0]);
-                ////                createinputFirst.setAttribute("value",ca[1]);
-                ////                createinputLast.setAttribute("value",ca[2]);
-                //                
-                //            }
-
-                //append everything
+                
                 createForm.appendChild(document.createTextNode("Fill out the form below to get emailed your results!"));
                 createForm.appendChild(document.createElement("br"));
 
@@ -181,11 +169,36 @@ function selected(dom) {
                 createForm.appendChild(createinputButton);
 
                 document.getElementById("here").appendChild(createForm);
+            }
+            else if(cookiesEnabled){
+                createinputEmail.setAttribute("value", document.GetCookie('email'));
+                createinputFirst.setAttribute("value", document.GetCookie('fname'));
+                createinputLast.setAttribute("value", document.GetCookie('lname'));
+                
+                //create the form
+                createForm.appendChild(document.createTextNode("Fill out the form below to get emailed your results!"));
+                createForm.appendChild(document.createElement("br"));
 
+                createForm.appendChild(document.createTextNode("First Name:    "));
+                createForm.appendChild(createinputFirst);
+                createForm.appendChild(document.createElement("br"));
+
+                createForm.appendChild(document.createTextNode("Last Name:     "));
+                createForm.appendChild(createinputLast);
+                createForm.appendChild(document.createElement("br"));
+
+                createForm.appendChild(document.createTextNode("Email:         "));
+                createForm.appendChild(createinputEmail);
+                createForm.appendChild(document.createElement("br"));
+
+                createForm.appendChild(createinputButton);
+
+                document.getElementById("here").appendChild(createForm);
             }
             else {
                 window.location.replace("https://www.mozilla.org/en-US/firefox/new/");
             }
+            
         }
     }
 }
@@ -219,3 +232,4 @@ function selected(dom) {
             }
             bodyEle.appendChild(divEle);
         }
+
